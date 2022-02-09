@@ -12,28 +12,54 @@
       <div class="operacao">
         <label for="adicao">Adição</label>
         <input id="adicao" type="text" />
-        <button>Fazer adição</button>
+        <input id="adicao2" type="text" />
+        <button onclick="{
+          var _1 = document.getElementById('adicao').value;
+          var _2 = document.getElementById('adicao2').value;
+          var res = document.getElementById('resultado').innerText = 
+          'Resultado: ' + somar(_1, _2)
+          }">Fazer adição</button>
       </div>
 
       <div class="operacao">
         <label for="subtracao">Subtração</label>
         <input id="subtracao" type="text" />
-        <button>Fazer subtração</button>
+        <input id="subtracao2" type="text" />
+        <button onclick="{
+          var _1 = document.getElementById('subtracao').value;
+          var _2 = document.getElementById('subtracao2').value;
+          var res = document.getElementById('resultado').innerText = 
+          'Resultado: ' + subtrair(_1, _2)
+          }">Fazer subtração</button>
       </div>
 
       <div class="operacao">
         <label for="multiplicacao">Multiplicação</label>
         <input id="multiplicacao" type="text" />
-        <button>Fazer multiplicação</button>
+        <input id="multiplicacao2" type="text" />
+        <button onclick="{
+          var _1 = document.getElementById('multiplicacao').value;
+          var _2 = document.getElementById('multiplicacao2').value;
+          var res = document.getElementById('resultado').innerText = 
+          'Resultado: ' + multiplicar(_1, _2)
+          }">Fazer multiplicação</button>
       </div>
 
       <div class="operacao">
         <label for="divisao">Divisão</label>
         <input id="divisao" type="text" />
-        <button>Fazer divisão</button>
+        <input id="divisao2" type="text" />
+        <button onclick="{
+          var _1 = document.getElementById('divisao').value;
+          var _2 = document.getElementById('divisao2').value;
+          var res = document.getElementById('resultado').innerText = 
+          'Resultado: ' + dividir(_1, _2)
+          }">Fazer divisão</button>
       </div>
       
-      <div id="resultado"></div>
+      <div id="resultado" style="font-size: 30px;"></div>
     </div>
+
+    <script src="./index.js"></script>
   </body>
 </html>

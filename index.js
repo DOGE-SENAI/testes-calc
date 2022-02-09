@@ -1,4 +1,8 @@
 function somar(valorA, valorB) {
+    if(/[A-Z]/gi.test(valorA) || /[A-Z]/gi.test(valorB)){
+        return "Os valores nao podem conter letras";
+    }
+
     valorA = Number.parseFloat(valorA);
     valorB = Number.parseFloat(valorB);
     
@@ -6,13 +10,32 @@ function somar(valorA, valorB) {
 }
 
 function subtrair(valorA, valorB) {
+    if(/[A-Z]/gi.test(valorA) || /[A-Z]/gi.test(valorB)){
+        return "Os valores nao podem conter letras";
+    }
+
     valorA = Number.parseFloat(valorA);
     valorB = Number.parseFloat(valorB);
     
     return valorA - valorB;
 }
 
+function multiplicar(valorA, valorB) {
+    if(/[A-Z]/gi.test(valorA) || /[A-Z]/gi.test(valorB)){
+        return "Os valores nao podem conter letras";
+    }
+
+    valorA = Number.parseFloat(valorA);
+    valorB = Number.parseFloat(valorB);
+
+    return valorA * valorB;
+}
+
 function dividir(valorA, valorB) {
+    if(/[A-Z]/gi.test(valorA) || /[A-Z]/gi.test(valorB)){
+        return "Os valores nao podem conter letras";
+    }
+
     valorA = Number.parseFloat(valorA);
     valorB = Number.parseFloat(valorB);
 
@@ -23,4 +46,4 @@ function dividir(valorA, valorB) {
     return valorA / valorB;
 }
 
-module.exports = { somar, subtrair, dividir };
+module.exports = { somar, subtrair, multiplicar, dividir };
